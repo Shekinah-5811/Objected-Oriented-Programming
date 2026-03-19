@@ -1,0 +1,13 @@
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+        print(f"Student {self.name} created")
+
+    def deconstruct(self):
+        print(f"Deconstructing student {self.name}")
+        self.name = None
+        self.grade = None
+
+student1 = Student("Alice", "A")
+student1.deconstruct()  # Clears student data manually
