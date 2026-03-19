@@ -1,0 +1,13 @@
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+        print(f"{self.make} {self.model} created")
+
+    def deconstruct(self):
+        print(f"Deconstructing {self.make} {self.model}")
+        self.make = None
+        self.model = None
+
+my_car = Car("Toyota", "Corolla")
+my_car.deconstruct()  # Manually clearing or reversing object state
